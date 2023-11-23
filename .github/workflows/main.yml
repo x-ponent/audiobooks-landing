@@ -18,4 +18,4 @@ jobs:
           echo "Build step for the main branch" &&  yarn && yarn build
           echo "Deploy github page"
           git remote set-url origin https://git:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
-          yarn deploy -u "github-actions-bot <support+actions@github.com>"
+          yarn deploy
