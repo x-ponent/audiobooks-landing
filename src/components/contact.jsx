@@ -49,7 +49,7 @@ export const Contact = (props) => {
             <div>
               <i className="fa fa-book"></i> :{" "}
               <a href="https://forms.gle/mZw2iD5mMpH9HnrF6" rel="noreferrer" target="_blank">
-                預約DEMO
+                預約 DEMO
               </a>
             </div>
           </div>

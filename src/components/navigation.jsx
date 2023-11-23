@@ -23,7 +23,7 @@ export const Navigation = (props) => {
             target="_blank"
             rel="noreferrer"
           >
-            預約DEMO
+            預約 DEMO
           </a>
           <a className="navbar-brand page-scroll" href="#page-top">
             <i>A</i>ud<i>I</i>obooks
@@ -78,7 +78,7 @@ export const Navigation = (props) => {
               target="_blank"
               rel="noreferrer"
             >
-              預約DEMO
+              預約 DEMO
             </a>
           </ul>
         </div>
