@@ -28,4 +28,5 @@ jobs:
         run: |
           echo "Deploy github page"
           git remote set-url origin https://git:${{ secrets.DEPLOY_TOKEN  }}@github.com/chucklien/audiobooks-landing.git
-          yarn deploy -- -u "github-actions-bot <support+actions@github.com>"
+          yarn
+          yarn deploy -u "github-actions-bot <support+actions@github.com>"
