@@ -22,8 +22,7 @@ jobs:
 
     steps:
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.DEPLOY_TOKEN }}
-          external_repository: chucklien/audiobooks-landing
-          publish_dir: ./build
+        run: |
+          echo "Deploy github page"
+          git remote set-url origin https://git:${{ secrets.DEPLOY_TOKEN  }}@github.com/chucklien/audiobooks-landing.git
+          yarn deploy -- -u "github-actions-bot <support+actions@github.com>"
