@@ -8,7 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions:
+      packages: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -18,4 +19,4 @@ jobs:
           echo "Build step for the main branch" &&  yarn && yarn build
           echo "Deploy github page"
           git remote set-url origin https://git:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
-          yarn deploy
+          yarn deploy -u "github-actions-bot <support+actions@github.com>"
