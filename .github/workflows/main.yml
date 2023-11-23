@@ -17,5 +17,4 @@ jobs:
         run: |
           echo "Build step for the main branch" &&  yarn && yarn build
           echo "Deploy github page"
-          git remote set-url origin https://git:${{ secrets.DEPLOY_TOKEN  }}@github.com/chucklien/audiobooks-landing.git
           yarn deploy -u "github-actions-bot <support+actions@github.com>"
