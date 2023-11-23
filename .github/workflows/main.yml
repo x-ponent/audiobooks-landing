@@ -13,20 +13,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run a script
-        run: echo "Build step for the main branch" &&  yarn && yarn build
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Deploy
+      - name: Build and Deploy
         run: |
+          echo "Build step for the main branch" &&  yarn && yarn build
           echo "Deploy github page"
           git remote set-url origin https://git:${{ secrets.DEPLOY_TOKEN  }}@github.com/chucklien/audiobooks-landing.git
-          yarn
           yarn deploy -u "github-actions-bot <support+actions@github.com>"
